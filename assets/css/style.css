@@ -1,3 +1,41 @@
-.center {
-    text-align: center;
-}
+body{
+    background-color: maroon;
+  }
+  .start{
+      padding:0;		
+  }
+  
+  h1{ 
+      text-align: center;
+  }
+  .header{
+      height: 200px;
+      width: 100%;
+  
+  }
+  .marioImg{
+      height: 180px;
+      display: block;
+      margin:auto;
+  }
+  .startBtn{
+      width: 500px;
+  }
+  .trivSection{ 
+      margin-top: 100px;
+      text-align: center;
+   }
+   .question, .answers, .rightAnswer, .wrongAnswer, .gameOver, .score{
+       font-family: 'Press Start 2P', cursive;
+       padding: 30px;
+       font-size: 15px;
+       margin: 10px;
+   }
+  
+   /*buttons*/
+   .redBtn { 
+    color: #FFFFFF; 
+    background-color: #DE1122; 
+    border-color: #000000;
+  
+  } 

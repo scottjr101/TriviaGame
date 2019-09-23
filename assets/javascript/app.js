@@ -1,7 +1,9 @@
+// golbal variables
+var trivTime = 0;
 var rightCount = 0;
 var wrongCount = 0;
 var questionsCount = 0;
-
+var Timer = '';
 var questions = {
     1:{
         question:'What was Metallicas first album?',
@@ -19,6 +21,14 @@ var questions = {
     }
 };
 
+function start(){
+	//When buttons is clicked clear trivSection
+	$('.startBtn').on('click',function(){
+		//Emptys trivia section
+		$('.trivSection').empty();
+		createQuestions();
+	});
+}
 
 var createQuestions = function(){
 	timerStart();
@@ -49,27 +59,9 @@ var createAnswers = function(){
 		newBtn.text(answers);
 		//Add answers to DOM
 		$('.trivSection').append(newBtn);
-
-var q1 = questions[1]['answers'][0];
-
-//$('#question1').text(questions[1]['question']);
-//$("#kem").text(q1);
-//$("#reload").text(questions[1]['answers'][1]);
-//$("#mop").text(questions[1]['answers'][2]);
-//$("#rtl").text(questions[1]['answers'][3]);
-
-//var userAnswer = $('#kem').attr('data-type');
-//$('#kem').attr('data-type', q1);
-
-
-
-$(document).on("click", function() {
-    var userAnswer = $("#kem").val();
-    var correctAnswer = q1;
-    if(userAnswer === correctAnswer){
-        rightCount++;
-        console.log(userAnswer);
     }
-});    
+    //Prevents click event from being saved
+	$(document).off('click','.answers',checkAnswer);
+	$(document).on('click','.answers',checkAnswer);
+}
 
-console.log(rightCount);
