@@ -1,41 +1,69 @@
 body{
-    background-color: maroon;
+    background: url(../images/real_cf.png);
   }
   .start{
       padding:0;		
+  }
+
+  .container {
+    background-color: rgb(71, 71, 71);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 14px groove rgb(131, 131, 131);
   }
   
   h1{ 
       text-align: center;
   }
+
+#demo {
+    color: rgba(0, 0, 0, 0.842);
+    font-size: 125px;
+    text-shadow: 3px 2px 3px rgba(180, 5, 5, 0.685);
+    font-family: 'Lacquer', sans-serif;
+}
+
   .header{
-      height: 200px;
+      height: 160px;
       width: 100%;
   
   }
-  .marioImg{
-      height: 180px;
-      display: block;
-      margin:auto;
-  }
+
   .startBtn{
       width: 500px;
+      
   }
   .trivSection{ 
-      margin-top: 100px;
+      margin-top: 50px;
       text-align: center;
    }
-   .question, .answers, .rightAnswer, .wrongAnswer, .gameOver, .score{
-       font-family: 'Press Start 2P', cursive;
+   .rightAnswer, .wrongAnswer, .gameOver, .score{
+       font-family: 'Lacquer', sans-serif;
+       color: rgba(0, 0, 0, 0.842);
        padding: 30px;
-       font-size: 15px;
+       font-size: 30px;
        margin: 10px;
    }
+
+.question {
+    font-family: 'Lacquer', sans-serif;
+    color: rgba(0, 0, 0, 0.842);
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+   .answers{
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+   }
+
+.reset{
+   margin: 10px;
+}
+
+   .timerSection{
+       margin-bottom: 25px;
+   }
   
-   /*buttons*/
-   .redBtn { 
-    color: #FFFFFF; 
-    background-color: #DE1122; 
-    border-color: #000000;
-  
-  } 
+   
