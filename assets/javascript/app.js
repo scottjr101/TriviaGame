@@ -132,8 +132,8 @@ var checkAnswer = function(){
            setTimeout(gameOver, 4000);
        }
    }
-   else{
-       wrongCount++;
+   else if(userAnswer === unAnswered){
+       unansweredCount++;
        //Clears out triv Section
        $('.trivSection').empty();
        var newImg = $('<img>');
@@ -143,7 +143,7 @@ var checkAnswer = function(){
        //Give div class
        newDiv.addClass('wrongAnswer');
        //adds Wrong! text to div
-       newDiv.html(wrong + '<br>' + 'The Correct Answer was: ' + correctAnswer);
+       newDiv.html('Out of Time!!' + '<br>' + 'The Correct Answer was: ' + correctAnswer);
        //Add answer to DOM
        $('.trivSection').append(newDiv);
        //Stops Time
@@ -161,8 +161,8 @@ var checkAnswer = function(){
            //Clears out triv Section
            $('.trivSection').empty();
            var newImg = $('<img>');
-       newImg.attr('src',correctImg);
-       $('.trivSection').append(newImg);
+           newImg.attr('src',correctImg);
+           $('.trivSection').append(newImg);
            var newDiv = $('<div>');
            //Give div class
            newDiv.addClass('wrongAnswer');
@@ -176,6 +176,50 @@ var checkAnswer = function(){
            setTimeout(gameOver, 4000);
        }
    }
+   else{
+    wrongCount++;
+    //Clears out triv Section
+    $('.trivSection').empty();
+    var newImg = $('<img>');
+    newImg.attr('src',correctImg);
+    $('.trivSection').append(newImg);
+    var newDiv = $('<div>');
+    //Give div class
+    newDiv.addClass('wrongAnswer');
+    //adds Wrong! text to div
+    newDiv.html(wrong + '<br>' + 'The Correct Answer was: ' + correctAnswer);
+    //Add answer to DOM
+    $('.trivSection').append(newDiv);
+    //Stops Time
+    clearInterval(timer)
+    //Add 1 to question count to move to the next question
+    questionsCount++;
+    
+    if(questionsCount <= 3){
+        setTimeout(function(){
+        $('.trivSection').empty();
+        createQuestions();
+        },4000);
+    }
+    else{
+        //Clears out triv Section
+        $('.trivSection').empty();
+        var newImg = $('<img>');
+        newImg.attr('src',correctImg);
+        $('.trivSection').append(newImg);
+        var newDiv = $('<div>');
+        //Give div class
+        newDiv.addClass('wrongAnswer');
+        //adds Wrong! text to div
+        newDiv.html(wrong + '<br>' + 'The Correct Answer was: ' + correctAnswer);
+        //Add answer to DOM
+        $('.trivSection').append(newDiv);
+        //Stops Time
+        clearInterval(timer);
+        //Reset
+        setTimeout(gameOver, 4000);
+    }
+ }
 }
 //Timer
 //==========================================
@@ -202,7 +246,7 @@ var timeDecrement = function(){
    trivTime--;
    //if time gets to 0
    if(trivTime === -10){
-       userAnswer = false;
+       userAnswer = unAnswered;
        //Clears Time
        clearInterval(timer);
        checkAnswer();
@@ -216,7 +260,7 @@ var gameOver = function(){
    $('.timerSection').empty();
    var scoreDiv = $('<div>');
    scoreDiv.addClass('score');
-   scoreDiv.html('Correct: ' + rightCount + '<br>' + 'Wrong: ' + wrongCount);
+   scoreDiv.html('Correct: ' + rightCount + '<br>' + 'Wrong: ' + wrongCount + '<br>' + 'Unanswered: ' + unansweredCount);
    $('.trivSection').append(scoreDiv);
    //Assign new div element to new Div
    var newDiv = $('<div>');

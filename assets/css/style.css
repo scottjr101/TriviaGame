@@ -6,10 +6,10 @@ body{
   }
 
   .container {
-    background-color: rgb(71, 71, 71);
+    background: url(../images/mochaGrunge.png);
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 14px groove rgb(131, 131, 131);
+    border: 14px groove rgb(54, 51, 51);
   }
   
   h1{ 
@@ -42,7 +42,7 @@ body{
        color: rgba(0, 0, 0, 0.842);
        padding: 30px;
        font-size: 30px;
-       margin: 10px;
+    
    }
 
 .question {
