@@ -37,7 +37,7 @@ body{
       margin-top: 50px;
       text-align: center;
    }
-   .rightAnswer, .wrongAnswer, .gameOver, .score{
+   .rightAnswer, .wrongAnswer, .unAnswered, .gameOver, .score{
        font-family: 'Lacquer', sans-serif;
        color: rgba(0, 0, 0, 0.842);
        padding: 30px;
