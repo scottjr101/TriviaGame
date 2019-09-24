@@ -264,7 +264,7 @@ var gameOver = function(){
    $('.timerSection').empty();
    var scoreDiv = $('<div>');
    scoreDiv.addClass('score');
-   scoreDiv.html('Correct: ' + rightCount + '<br>' + 'Wrong: ' + wrongCount + '<br>' + 'Unanswered: ' + unansweredCount);
+   scoreDiv.html('Correct: ' + rightCount + '<br>' + 'Wrong: ' + wrongCount);
    $('.trivSection').append(scoreDiv);
    //Assign new div element to new Div
    var newDiv = $('<div>');
