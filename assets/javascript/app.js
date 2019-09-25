@@ -23,6 +23,22 @@ var questions = {
         imageUrl:"https://thumbs.gfycat.com/BiodegradableUnrulyIberianchiffchaff-size_restricted.gif"
     },
     3:{
+        question:'What genre of music was Pantera before they called themselves Pantera?',
+        answers:["Punk Rock", "Pirate Metal", "Hard Rock", "Glam Metal"],
+        correct:"Glam Metal",
+        right: 'Correct!',
+		wrong: 'Nope!',
+        imageUrl:"https://www.ultimate-guitar.com/static/article/draft/89486_-jK3QEDmeknUxRYS_44814.jpg"
+    },
+    4:{
+        question:'What branch of the Military did Maynard James Keenan of Tool serve in?',
+        answers:["Army", "Air Force", "Navy", "Marines"],
+        correct:"Army",
+        right: 'Correct!',
+		wrong: 'Nope!',
+        imageUrl:"https://m.media-amazon.com/images/S/aplus-media/vc/bf325a19-7974-4da6-af63-daf26866f821._SL220__.jpg"
+    },
+    5:{
         question:'Who has been the "Prince of Darkness" since 1979?',
         answers:["Ronnie Dio", "Ozzy Osbourne", "David Lee Roth", "Donald Trump"],
         correct:"Ozzy Osbourne",
@@ -105,7 +121,7 @@ var checkAnswer = function(){
        clearInterval(timer)
        //Add 1 to question count to move to the next question
        questionsCount++;
-       if(questionsCount <= 3){
+       if(questionsCount <= 5){
            //removes CORRECT! text and continues to create next question after 3 seconds
            setTimeout(
                function(){
@@ -152,7 +168,7 @@ var checkAnswer = function(){
     //Add 1 to question count to move to the next question
     questionsCount++;
     
-    if(questionsCount <= 3){
+    if(questionsCount <= 5){
         setTimeout(function(){
         $('.trivSection').empty();
         createQuestions();
@@ -225,7 +241,7 @@ var timeDecrement = function(){
        //Add 1 to question count to move to the next question
        questionsCount++;
        
-       if(questionsCount <= 3){
+       if(questionsCount <= 5){
            setTimeout(function(){
            $('.trivSection').empty();
            createQuestions();
