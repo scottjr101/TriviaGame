@@ -12,4 +12,6 @@ The object of the game is to answer the question within the alotted amount of ti
 
 [Click Here](https://scottjr101.github.io/TriviaGame/)
 
+![Metal Trivia](assets/images/metalTrivia.png)
+
 
