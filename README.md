@@ -1,12 +1,18 @@
 # Metal Trivia Game
 
-### Overview
+**Creator**: `Scott Ladd`
 
-A Metal based Trivia game that uses JavaScript for the logic and jQuery to manipulate HTML.
+**Created on**: `Oct 21st 2019`
 
-### Objective
+- - -
+### ABOUT THE APP
 
-The object of the game is to answer the question within the alotted amount of time.
+A Metal based Trivia game that uses JavaScript for the logic and jQuery to manipulate HTML. The object of the game is to answer the question within the allotted amount of time.
+
+### HOW TO PLAY
+
+Once the page loads, click the start button to begin. Each question is timed and you progress is tracked at the bottom via the progress bar. 
+If you fail to answer the question within 4 seconds the question is marked wrong and it moves on to the next one. Good luck!
 
 ### Deployed Site
 
@@ -14,4 +20,12 @@ The object of the game is to answer the question within the alotted amount of ti
 
 ![Metal Trivia](assets/images/metalTrivia.png)
 
+- - -
 
+## TECHNOLOGIES USED
+* Javascript
+* CSS
+* HTML
+* BootStrap
+* Git
+* GitHub
